@@ -1,0 +1,86 @@
+---
+layout: default
+title: Acoustics
+description: ...
+thumbnail: ac_thumbnail.jpg
+isready: false
+---
+
+<section>
+<div class="container text-justify">
+
+<h1> {{page.title}} </h1>
+
+<h2>Studying architectural acoustics</h2>
+
+<p>
+Our approach to the archaeoacoustics study of Notre-Dame de Paris relies on acoustic measurements made in the cathedral before 2019. Replicating the inner geometry of the cathedral and calibrating this model to those measurements, the models are then modified based on available documentation to represent past or future architectural and decorative modifications. The simulations are then used to generate Room Impulse Responses (RIRs), which can be integrated into immersive, interactive rendering engines to reconstruct the acoustic conditions within the cathedral virtually [1].
+</p>
+
+<p>
+When an acoustic source emits sound, the resulting sound that arrives at a listener/receiver position can be described as a combination of the initial, direct sound, and delayed reflections induced by obstacles (walls, etc.) between and around the source and receiver. The sum of those reflections over time constitutes the room's acoustic response. When the source stops producing, listeners perceive the gradual decay of sound as reverberation, i.e. the time it takes for the sound to fade. Therefore, the acoustical quality of a room depends on its reverberation time, which must be adapted to its use.
+</p>
+
+<p>
+Scientists have been using physical and digital sound reconstruction methods for decades, but it is only recently that computer technologies have improved the quality and resolution of acoustic modelling sufficiently to enable them to tackle large-scale, complex spaces. With modern modelling approaches, sound in correctly simulated spaces can be perceptually comparable to actual on-site recordings. Once created, models can be modified to test acoustic conditions in different architectural configurations, source and listener positions, and usage contexts. Acoustic simulations can be a powerful tool for historical studies, providing researchers with a sensory presentation of sound previously available only through descriptions.
+</p>
+
+
+<h2>Digital acoustic twins</h2>
+
+<p>
+A digital twin can be described as a digital model of an intended or actual real-world physical system that serves as an effectively indistinguishable digital counterpart for practical purposes, such as simulation, testing, and evaluation. At the core of the current project is a digital acoustic twin of Notre-Dame de Paris Cathedral.
+</p>
+
+<p>
+In architectural acoustics, numerical simulations have been used for years to analyse and predict the resulting acoustics in various buildings. With the evolving quality of numerical simulations, meticulous calibration, and the design of interactive and immersive systems employing the results of these models, it is now possible to provide indistinguishable virtual environments where the acoustics of a space — existing or not — can be examined through subjective evaluation and not just analytical metrics.
+</p>
+
+
+<h2>Model calibration</h2>
+
+<p>
+In historic auralizations, calibrating the studied building’s room acoustic simulation model is often necessary to accurately represent its acoustical environment. A methodical calibration procedure for GA models using room acoustics prediction programs to create realistic virtual audio realities, termed auralizations, has been proposed [2]. Perceptual evaluations of this method have also been carried out [3].
+</p>
+
+
+<h3>Architectural history of Notre-Dame</h3>
+
+<p>
+Developmental efforts commenced on the eastern extremity of the cathedral's ambulatory in 1163 while pre-existing church structures were demolished to clear the way. These structures included at least one large basilica underneath the modern forecourt. The inaugural construction phase concluded in 1182, after which a substantial retaining wall was built to allow services to occur inside the chancel while construction continued westward.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_1.png">
+<p class="legend">
+    Figure: Acoustic model floor-plans and sections of cathedrals built on Île-de-la-Cité, from left to right: the pre-Gothic basilica underneath Notre-Dame's parvis (before 1163); Notre-Dame at its consecration (1182); completion of the nave (ca. 1220) and lateral chapels (ca. 1350).
+</p>
+
+<p>
+Construction reached the grand facade by the 1220s, and subsequent development expanded the cathedral between the foundations of the flying buttresses, resulting in 35 lateral chapels. More details on the early acoustic conditions have been presented in [4] and [5]. After the 14th century, the external structure remained largely unchanged until the renovations of the 19th century. The video below provides a good representation of the architectural history of Notre-Dame.
+</p>
+
+<div class="embed-responsive embed-responsive-16by9 ">
+<iframe src="https://www.youtube.com/embed/JvvJJzmXdTY?si=1AAhpZBMUfyFViBg" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+<h2> Bibliography </h2>
+
+<p class="bibitem"> [1] Katz, B. F.G., Murphy, D., and Farina, A. “The Past Has Ears (PHE) : XR Explorations of acoustic spaces
+as Cultural Heritage”, in Intl Conf on Augmented Reality,
+Virtual Reality and Computer Graphics (SALENTO AVR), volume 12243 of Lecture Notes in Computer Science, pp. 91–98, Salento, 2020, (<a href="https://hal.science/hal-02935400" >url</a>, <a href="https://youtu.be/nvC-SRuZkwc?si=kJKMINXn1DPsqlDn">video</a>).</p>
+
+<p class="bibitem"> [2] Postma, B. N. and Katz, B. F.G., “Creation and Calibration Method of Virtual Acoustic Models for Historic Auralizations”, Virtual Reality, 19, pp. 161–180, 2015, (<a href="https://hal.sorbonne-universite.fr/hal-01780472" >url</a>).</p>
+
+<p class="bibitem"> [3] Postma, B. N. and Katz, B. F.G., “Perceptive and objective evaluation of calibrated room acoustic simulation auralizations”, J Acoust Soc Am, 140(6), pp.4326–4337, 2016, (<a href="https://hal.sorbonne-universite.fr/hal-01780459" >url</a>).</p>
+
+<p class="bibitem"> [4] Mullins, S. S., Canfield-Dafilou, E. K., and Katz, B. F.G., “The development of the early acoustics of the chancel in Notre-Dame de Paris: 1160-1230”, in Symp The Acoustics of Ancient Theatres, pp. 1–4, Verona, 2022, (<a href="https://hal.science/hal-03724923/document" >url</a>).</p>
+
+<p class="bibitem"> [5] Canfield-Dafilou, E. K., Mullins, S. S., and Katz, B. F.G., “Opening the lateral chapels and the acoustics of Notre-Dame de Paris: 1225-1330”, in Symp The Acoustics of Ancient Theatres, pp. 1–4, Verona, 2022, (<a href="https://hal.science/hal-03724948" >url</a>).</p>
+
+</div>
+</section>
+

@@ -1,0 +1,41 @@
+---
+layout: default
+title: Auralisation
+description: ...
+thumbnail: au_thumbnail.jpg
+---
+
+<section>
+<div class="container text-justify">
+
+<h1> {{page.title}} </h1>
+
+<h2>Audio rendering tool, bridging research and production</h2>
+
+<p>
+Auralization, a method for replicating realistic auditory experiences in virtual settings, is used in architectural acoustics and sound system design [1, 2]. This technique involves convolving anechoic sound with RIRs to simulate how sound travels in specific spaces. Dynamic auralizations increase realism by interpolating between RIRs as sources or receivers move [3, 4].
+</p>
+
+<p>
+To bridge the gap between acoustic research and practical application, we developed <a href="http://roomz.dalembert.upmc.fr/">RoomZ</a>, an audio plugin for digital audio workstations. It allows for dynamic auralizations by adjusting source and receiver positions across RIR grids, featuring fast multi-core convolution and custom navigation scenarios with multi-channel outputs (monaural, binaural, ambisonic, etc.). The interface presents a 2D graphical map for panning, dynamically applying weights based on geometric distributions to convolve the input with appropriate RIRs. RoomZ enables the accurate rendering of environments like a medieval Notre-Dame, directly integrating acoustic research into production, thus enhancing virtual and augmented reality applications.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_2.png">
+<p class="legend">
+    Figure: Example RoomZ Notre-Dame scene with receiver near transept and moving source trajectory.
+</p>
+
+
+<h2> Bibliography </h2>
+
+<p class="bibitem"> [1] Vorländer, M., “Auralization: Fundamentals of acoustics, modelling, simulation, algorithms and acoustic virtual reality”, Springer Nature, 2020, (<a href="https://link.springer.com/book/10.1007/978-3-540-48830-9">url</a>).</p>
+
+<p class="bibitem"> [2] Thery, D., Boccara, V., and Katz, B. F.G., “Auralization uses in acoustical design: a survey study”, J Acoust Soc Am, 145(6), pp. 3446–3456, 2019, (<a href="https://hal.science/hal-02155781/document">url</a>).</p>
+
+<p class="bibitem"> [3] Savioja, L., Huopaniemi, J., Lokki, T., and Väänänen, R., “Creating interactive virtual acoustic environments”, J Aud Eng Soc, 47(9), pp. 675–705, 1999, (<a href="http://lib.tkk.fi/Diss/2002/isbn9512261588/article1.pdf">url</a>).</p>
+
+<p class="bibitem"> [4] De Muynke, J., Poirier-Quinot, D., and Katz, B. F.G., “Effect of interpolation artefacts on perceived stability of nearby sources in a navigable reverberant environment”, J Aud Eng Soc, 2024, (<a href="https://cnrs.hal.science/IJLRDA/hal-04745857v1">url</a>).</p>
+
+</div>
+</section>
+
