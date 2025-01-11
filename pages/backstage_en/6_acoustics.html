@@ -3,7 +3,7 @@ layout: default
 title: Acoustics
 description: ...
 thumbnail: ac_thumbnail.jpg
-isready: false
+isready: true
 ---
 
 <section>
@@ -52,24 +52,47 @@ Developmental efforts commenced on the eastern extremity of the cathedral's ambu
 
 <img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_1.png">
 <p class="legend">
-    Figure: Acoustic model floor-plans and sections of cathedrals built on Île-de-la-Cité, from left to right: the pre-Gothic basilica underneath Notre-Dame's parvis (before 1163); Notre-Dame at its consecration (1182); completion of the nave (ca. 1220) and lateral chapels (ca. 1350).
+Acoustic model floor-plans and sections of cathedrals built on Île-de-la-Cité, from left to right: the pre-Gothic basilica underneath Notre-Dame's parvis (before 1163); Notre-Dame at its consecration (1182); completion of the nave (ca. 1220) and lateral chapels (ca. 1350).
 </p>
 
 <p>
-Construction reached the grand facade by the 1220s, and subsequent development expanded the cathedral between the foundations of the flying buttresses, resulting in 35 lateral chapels. More details on the early acoustic conditions have been presented in [4] and [5]. After the 14th century, the external structure remained largely unchanged until the renovations of the 19th century. The video below provides a good representation of the architectural history of Notre-Dame.
+Construction reached the grand facade by the 1220s, and subsequent development expanded the cathedral between the foundations of the flying buttresses, resulting in 35 lateral chapels. More details on the early acoustic conditions have been presented in [4] and [5]. After the 14th century, the external structure remained largely unchanged until the renovations of the 19th century.
 </p>
 
 <div class="embed-responsive embed-responsive-16by9 ">
 <iframe src="https://www.youtube.com/embed/JvvJJzmXdTY?si=1AAhpZBMUfyFViBg" frameborder="0" allowfullscreen></iframe>
 </div>
+<p class="legend">
+Video: representation of the architectural history of Notre-Dame.
+</p>
 
 
+<h3> Characterising Acoustics </h3>
 
+<p>
+Several basic methods are commonly employed in room acoustic analysis. These are principally founded on exploitation of the transfer function associated with the effect of the room on an acoustic source for a given receiver. This transfer function is characterized by the RIR which can be measured or simulated in a variety of ways.
+</p>
+
+<p>
+<b>Reverberation Time</b>: The reverberation time (<i>Tx</i>) is characterized by the decay rate of a sound, equated to the time it takes for the sound to decay by 60 dB (<i>T60</i>). Due to measurement dynamic constraints, RIR decay analysis is typically constrained to the decay from −5 dB to −25 dB (<i>T20</i>) or from −5 dB to −35 dB (<i>T30</i>), depending of the available dynamic range in the signal. <i>Tx</i> is always then projected to an equivalent time for <i>T60</i>. Reverberation time is then associated with the perceived decay at the end of a musical passage, as the sound decays into silence. The generally employed just noticeable difference (JND) for changes in reverberation time is 5%, for <i>T60</i> > 1s.
+</p>
+
+
+<h3> Changing acoustics </h3>
+
+<p>
+The figure below provides a summary of various reverberation times resulting from both geometrical acoustic simulations (typical decorative, unoccupied, prior to 1987) and measurements (from 1987 onwards) of Notre-Dame, as a result of various previous studies [3-6]. Of note is the <i>2020 (fire)</i> condition, representing  the post-fire measurements, with holes in the vaulted ceiling, and the <i>1182 (apse)</i> condition, when only the Apse end of the cathedral was in open, which both have significantly shorter reverberation times than all other  conditions, prior to the consideration of high festive decorations.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_3.png">
+<p class="legend">
+Collection of octave-band mean reverberation times in Notre-Dame following historically informed simulations (prior to 1987) and measurements (from 1987 onwards), unoccupied conditions (data from [3-6]).
+</p>
 
 
 <h2> Bibliography </h2>
 
-<p class="bibitem"> [1] Katz, B. F.G., Murphy, D., and Farina, A. “The Past Has Ears (PHE) : XR Explorations of acoustic spaces
+<p class="bibitem"> [1] Katz, B. F.G., Murphy, D., and Farina, A., “The Past Has Ears (PHE) : XR Explorations of acoustic spaces
 as Cultural Heritage”, in Intl Conf on Augmented Reality,
 Virtual Reality and Computer Graphics (SALENTO AVR), volume 12243 of Lecture Notes in Computer Science, pp. 91–98, Salento, 2020, (<a href="https://hal.science/hal-02935400" >url</a>, <a href="https://youtu.be/nvC-SRuZkwc?si=kJKMINXn1DPsqlDn">video</a>).</p>
 
@@ -80,6 +103,10 @@ Virtual Reality and Computer Graphics (SALENTO AVR), volume 12243 of Lecture Not
 <p class="bibitem"> [4] Mullins, S. S., Canfield-Dafilou, E. K., and Katz, B. F.G., “The development of the early acoustics of the chancel in Notre-Dame de Paris: 1160-1230”, in Symp The Acoustics of Ancient Theatres, pp. 1–4, Verona, 2022, (<a href="https://hal.science/hal-03724923/document" >url</a>).</p>
 
 <p class="bibitem"> [5] Canfield-Dafilou, E. K., Mullins, S. S., and Katz, B. F.G., “Opening the lateral chapels and the acoustics of Notre-Dame de Paris: 1225-1330”, in Symp The Acoustics of Ancient Theatres, pp. 1–4, Verona, 2022, (<a href="https://hal.science/hal-03724948" >url</a>).</p>
+
+<p class="bibitem"> [6] Katz, B. F.G., and Weber, A., “An Acoustic Survey of the Cathédrale Notre-Dame de Paris before and after the Fire of 2019”, in Acoustics 2020, 2, 791–802; doi:10.3390/acoustics2040044, (<a href="https://hal.science/hal-02994273" >url</a>).</p>
+
+
 
 </div>
 </section>

@@ -89,6 +89,10 @@ h1, h2, h3 {
     margin-top: calc(#{$margin_default} * 1.0);
 }
 
+p {
+    justify-content: center;
+}
+
 h3, h4, h5, h6, p, ul{
     margin-top: 0%;
 }
@@ -125,7 +129,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 42px;
 }
 
 h2 {
@@ -216,6 +220,17 @@ section {
 
 aside {
     padding: 50px 0;
+}
+
+.credits {
+    h2, h3 {
+        margin-bottom: 0px;
+        color: darkgray;
+    }
+    h4 {
+        margin-bottom: 10px;
+        color: darkgray;
+    }
 }
 
 // all but navbar's
