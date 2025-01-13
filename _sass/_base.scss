@@ -464,15 +464,23 @@ header {
                 margin-top: 15px;
                 margin-bottom: 1px;
                 color: white;
-                font-size: 65px;
+                // font-size: 65px;
             }
             hr {
                 margin: 30px auto;
             }
             h2 {
                 color: white;
-                font-size: 32px;
+                font-size: 24px;
                 margin-bottom: 15px;
+            }
+            @media (min-width: 768px) {
+                h1 {
+                    font-size: 65px;
+                }
+                h2 {
+                    font-size: 32px;
+                }
             }
         }
     }
