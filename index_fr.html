@@ -2,125 +2,187 @@
 layout: default_fr
 ---
 
-<header id="page-top">
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1>L’ArchéoConcert</h1>
-            <br>
-            <h2>Le passé a des oreilles à Notre-Dame</h2>
+<header id="pagetop">
+<div class="header-content" >
 
-            <!-- <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a> -->
-
-            <!-- Building warning -->
-            <!--
-            <br>
-            <p style="color:#FF0000">
-            <i class="fa fa-exclamation-triangle fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-            </p>
-            <p style="color:#FF0000">
-            <i><b>EVERTims framework under construction, not safe to use yet</i></b>
-            </p>
-            -->
-
-        </div>
-
-        <br> <br><br>
-
-        <!-- <a href="" class="btn btn-default btn-lg page-scroll" style="color:white; background-color: rgba(0, 0, 0, 0.4);">Watch Movie</a> -->
-        <p style="font-size: 22px; font-weight: 400; background-color: transparent; display: inline-block; padding-left:10px; padding-right:10px; border-radius:10px; "><i> Première à la <a href"">Semaine du Son 2025</a> <br> le 23 Janvier 2025 </i></p>
-
+    <div class="header-content-inner">
+        <h1>L’ArchéoConcert</h1>
+        <br>
+        <h2>À l'écoute du passé à Notre-Dame</h2>
     </div>
 
+    <br><br><br>
+
+    <p style="font-size: 20px; font-weight: 350;"><i>Un concert à travers le temps et l'espace dans la cathédrale</i>
+    </p>
+
+</div>
 </header>
 
+<hr class = "line">
 
-<hr style="margin-top: 0px; margin-bottom: 0px; border-color: transparent;"> <!-- add a line-->
+<div class="baground-secondary">
 
-<section id="concert" style="background-color: rgba(40, 40, 40, 1);">
+<section id="concert">
+<div class="container">
 
+<h2>Le Concert</h2>
+<p>Différentes façons d'écouter le concert.</p>
 
-    <div class="container">
+<div class="row pack">
 
-        <h1 style="color: white; margin-top: 0px; margin-bottom: 20px; text-align: left;">Le Concert</h1>
-        <p style="color: white; text-align: left;">Différentes façons d'écouter le concert.</p>
+    {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'concert_fr'"%}
 
+    {% assign sortedPages = subfolder | sort:'name' %}
 
-        <div class="row pack">
+    {% for page in sortedPages limit:100 %}
+    {% if page.thumbnail %}
 
-            <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 card">
-                <a href="" class="index-anchor">
-                    <div class="panel panel-default">
-                        <img class="panel-img" src="{{site.baseurl}}/img/image009.png" alt="">
-                        <div class="panel-body"><h3 class="panel-title">Film</h3></div>
-                    </div>
-                </a>
+    <div class="col-xs-12 col-sm-6 col-lg-4 card">
+
+        {% if page.isready %}
+        <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor">
+            <div class="panel panel-default">
+                <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}">
+
+                <div class="panel-body">
+                    <h3 class="panel-title">{{ page.title | truncate: 25 }}</h3>
+                </div>
             </div>
+        </a>
 
-            <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 card">
-                <a href="" class="index-anchor">
-                    <div class="panel panel-default">
-                        <img class="panel-img" src="{{site.baseurl}}/img/image010.png" alt="">
-                        <div class="panel-body"><h3 class="panel-title">Version 360 en ligne</h3></div>
-                    </div>
-                </a>
-            </div>
+        {% else %}
+        <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor disabled">
+            <div class="panel panel-default">
 
-            <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 card">
-                <a href="" class="index-anchor">
-                    <div class="panel panel-default">
-                        <img class="panel-img" src="{{site.baseurl}}/img/image011.png" alt="">
-                        <div class="panel-body"><h3 class="panel-title">Concert en RV</h3></div>
-                    </div>
-                </a>
+                <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}" style="opacity:0.4;">
+
+                <div class="panel-body">
+                    <h3 class="panel-title" style="color:gray;">{{ page.title | truncate: 25 }}</h3>
+                </div>
             </div>
+        </a>
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+</div>
+</section>
+
+
+<hr class = "line">
+
+<section id="backstage">
+
+<div class="container">
+
+<h2 >Les Coulisses</h2>
+<p style="color: white; text-align: left;">Explorez comment le concert a été organisé et comment une reconstruction virtuelle documentée a été conçue pour offrir une expérience immersive de l’histoire musicale de la cathédrale.</p>
+
+    <div class="row pack">
+
+        {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'backstage_fr'"%}
+        {% assign sortedPages = subfolder | sort:'name' %}
+
+        {% for page in sortedPages limit:100 %}
+        {% if page.thumbnail %}
+
+
+        <div class="col-xs-12 col-sm-6 col-lg-4 card">
+
+            {% if page.isready %}
+            <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor">
+                <div class="panel panel-default">
+                    <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}">
+
+                    <div class="panel-body">
+                        <h3 class="panel-title">{{ page.title | truncate: 25 }}</h3>
+                    </div>
+                </div>
+            </a>
+
+            {% else %}
+            <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor disabled">
+                <div class="panel panel-default">
+
+                    <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}" style="opacity:0.4;">
+
+                    <div class="panel-body">
+                        <h3 class="panel-title" style="color:gray;">{{ page.title | truncate: 25 }}</h3>
+                    </div>
+                </div>
+            </a>
+            {% endif %}
 
         </div>
-    </div>
 
-</section>
-
-
-<hr style="margin-top: 0px; margin-bottom: 0px; border-color: transparent;"> <!-- add a line-->
-
-<section id="backstage" style="background-color: rgba(40, 40, 40, 1);">
-
-    <div class="container">
-
-        <h1 style="color: white; margin-top: 0px; margin-bottom: 20px; text-align: left;">Les coulisses</h1>
-        <p style="color: white; text-align: left;">Explorer les coulisses du concert.</p>
-
-            <div class="row pack">
-
-                {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'fr'"%}
-                {% assign sortedPages = subfolder | sort:'title' %}
-
-                {% for page in sortedPages limit:100 %}
-                {% if page.thumbnail %}
-
-                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 card">
-                    <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor">
-                        <div class="panel panel-default">
-
-                            <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}">
-
-                            <div class="panel-body">
-                                <h3 class="panel-title">{{ page.title | truncate: 25 }}</h3>
-
-                            <!--
-                            <p class = "text-left" style="margin-bottom:0;" ><small>
-                            {{ page.description }}
-                            </small></p>
-                            -->
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                {% endif %}
-                {% endfor %}
-
-            </div>
+        {% endif %}
+        {% endfor %}
 
     </div>
 
+</div>
+
+
 </section>
+
+<hr class = "line">
+
+<section id="logos">
+
+<div class="container">
+<div class="row text-center" style="margin-bottom: 30px;">
+
+  <div class="col-xs-6 col-sm-4">
+    <a href="https://www.sorbonne-universite.fr">
+    <img class="logo" src="{{ site.baseurl }}/img/logo_sorbonne_white.png">
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <a href="https://www.conservatoiredeparis.fr">
+    <img class="logo" src="{{ site.baseurl }}/img/logo_cnsmdp_white.png">
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <a href="https://www.dada-animation.com">
+    <img class="logo" src="{{ site.baseurl }}/img/logo_dada_white.png" style="max-height: 65px;">
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <a href="https://www.cnrs.fr">
+    <img class="logo" src="{{ site.baseurl }}/img/logo_cnrs_white.png" style="max-height: 65px;">
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <a href="https://www.culture.gouv.fr">
+    <img class="logo" src="{{ site.baseurl }}/img/logo_mc_white.png" style="max-height: 65px;">
+    </a>
+  </div>
+
+</div>
+</div>
+
+</section>
+
+<hr class = "line">
+
+<section id="contacts">
+<div class="text-center no-padding">
+    <a href="mailto:brian.katz@sorbonne-universite.fr">
+      <i class="fa fa-envelope fa-2x wow bounceIn" data-wow-delay=".1s"></i>
+    </a>
+    <p style="color: white;">contact</p>
+</div>
+</section>
+
+</div>
+

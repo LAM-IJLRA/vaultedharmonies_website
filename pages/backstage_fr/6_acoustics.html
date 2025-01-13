@@ -1,0 +1,110 @@
+---
+layout: default_fr
+title: Acoustiques
+description: ...
+thumbnail: ac_thumbnail.jpg
+isready: true
+---
+
+<section>
+<div class="container text-justify">
+
+<h1> {{page.title}} </h1>
+
+<h2>Étudier l'acoustique architecturale</h2>
+
+<p>
+Notre approche de l'étude archéoacoustique de Notre-Dame de Paris repose sur des mesures acoustiques effectuées dans la cathédrale avant 2019. En reproduisant la géométrie intérieure de la cathédrale et en calibrant ce modèle avec ces mesures, les modèles sont ensuite modifiés en fonction des documents disponibles pour représenter des modifications architecturales et décoratives passées ou futures. Les simulations sont alors utilisées pour générer des Réponses Impulsionnelles de Salle (RIR), qui peuvent être intégrées dans des moteurs de rendu immersifs et interactifs pour reconstruire virtuellement les conditions acoustiques au sein de la cathédrale [1].
+</p>
+
+<p>
+Lorsqu'une source acoustique émet un son, le son résultant qui atteint un auditeur/récepteur peut être décrit comme une combinaison du son direct initial et des réflexions retardées induites par les obstacles (murs, etc.) entre et autour de la source et du récepteur. La somme de ces réflexions dans le temps constitue la réponse acoustique de la salle. Lorsque la source cesse d'émettre, les auditeurs perçoivent la décroissance progressive du son comme une réverbération, c'est-à-dire le temps nécessaire au son pour s'estomper. Par conséquent, la qualité acoustique d'une salle dépend de son temps de réverbération, qui doit être adapté à son utilisation.
+</p>
+
+<p>
+Les scientifiques utilisent des méthodes de reconstruction sonore physique et numérique depuis des décennies, mais ce n'est que récemment que les technologies informatiques ont amélioré la qualité et la résolution des modélisations acoustiques au point de permettre d'aborder des espaces complexes de grande échelle. Avec les approches modernes de modélisation, le son dans des espaces correctement simulés peut être perceptuellement comparable aux enregistrements réels sur site. Une fois créés, les modèles peuvent être modifiés pour tester les conditions acoustiques dans différentes configurations architecturales, positions de la source et du récepteur, et contextes d'utilisation. Les simulations acoustiques peuvent être un outil puissant pour les études historiques, offrant aux chercheurs une présentation sensorielle des sons auparavant disponibles uniquement par des descriptions.
+</p>
+
+<h2>Jumeaux acoustiques numériques</h2>
+
+<p>
+Un jumeau numérique peut être décrit comme un modèle numérique d'un système physique réel ou prévu, servant de contrepartie numérique indissociable à des fins pratiques telles que la simulation, les tests et l'évaluation. Au cœur du projet actuel se trouve un jumeau acoustique numérique de la cathédrale Notre-Dame de Paris.
+</p>
+
+<p>
+En acoustique architecturale, des simulations numériques sont utilisées depuis des années pour analyser et prédire les acoustiques résultantes dans divers bâtiments. Avec l'évolution de la qualité des simulations numériques, un calibrage méticuleux et la conception de systèmes interactifs et immersifs exploitant les résultats de ces modèles, il est désormais possible de fournir des environnements virtuels indiscernables où l'acoustique d'un espace—existant ou non—peut être examinée à travers une évaluation subjective et non uniquement des métriques analytiques.
+</p>
+
+<h2>Calibrage des modèles</h2>
+
+<p>
+Dans les auralisations historiques, le calibrage du modèle de simulation acoustique de la salle étudiée est souvent nécessaire pour représenter avec précision son environnement acoustique. Une procédure de calibrage méthodique pour les modèles GA utilisant des programmes de prédiction acoustique de salles afin de créer des réalités audio virtuelles réalistes, appelées auralisations, a été proposée [2]. Des évaluations perceptuelles de cette méthode ont également été réalisées [3].
+</p>
+
+<h3>Histoire architecturale de Notre-Dame</h3>
+
+<p>
+Les efforts de développement ont commencé à l'extrémité orientale de l'ambulatoire de la cathédrale en 1163, tandis que des structures d'église préexistantes ont été démolies pour libérer le terrain. Ces structures comprenaient au moins une grande basilique sous l'actuel parvis moderne. La phase initiale de construction s'est achevée en 1182, après quoi un mur de soutènement substantiel a été construit pour permettre aux services religieux de se dérouler à l'intérieur du chœur tout en poursuivant les travaux vers l'ouest.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_1.png">
+<p class="legend">
+Plans et sections de modèles acoustiques des cathédrales construites sur l'Île-de-la-Cité, de gauche à droite : la basilique pré-gothique sous le parvis de Notre-Dame (avant 1163) ; Notre-Dame à sa consécration (1182) ; achèvement de la nef (vers 1220) et chapelles latérales (vers 1350).
+</p>
+
+<p>
+La construction a atteint la grande façade dans les années 1220, et le développement ultérieur a étendu la cathédrale entre les fondations des arcs-boutants, aboutissant à 35 chapelles latérales. Des détails supplémentaires sur les conditions acoustiques initiales ont été présentés dans [4] et [5]. Après le 14e siècle, la structure externe est restée largement inchangée jusqu'aux rénovations du 19e siècle.
+</p>
+
+<div class="embed-responsive embed-responsive-16by9 ">
+<iframe src="https://www.youtube.com/embed/JvvJJzmXdTY?si=1AAhpZBMUfyFViBg" frameborder="0" allowfullscreen></iframe>
+</div>
+<p class="legend">
+Vidéo : représentation de l'histoire architecturale de Notre-Dame.
+</p>
+
+<h3> Caractérisation des acoustiques </h3>
+
+<p>
+Plusieurs méthodes de base sont couramment utilisées dans l'analyse acoustique des salles. Celles-ci reposent principalement sur l'exploitation de la fonction de transfert associée à l'effet de la salle sur une source acoustique pour un récepteur donné. Cette fonction de transfert est caractérisée par la RIR, qui peut être mesurée ou simulée de diverses manières.
+</p>
+
+<p>
+<b>Temps de réverbération</b> : Le temps de réverbération (<i>Tx</i>) est caractérisé par le taux de décroissance d'un son, équivalent au temps nécessaire pour que le son décroisse de 60 dB (<i>T60</i>). En raison des contraintes dynamiques de mesure, l'analyse de la décroissance de la RIR est généralement limitée à la décroissance de -5 dB à -25 dB (<i>T20</i>) ou de -5 dB à -35 dB (<i>T30</i>), en fonction de la plage dynamique disponible dans le signal. <i>Tx</i> est alors projeté sur un temps équivalent pour <i>T60</i>. Le temps de réverbération est ensuite associé à la décroissance perçue à la fin d'un passage musical, alors que le son s'estompe dans le silence. La différence perceptible minimale généralement utilisée (JND) pour les changements de temps de réverbération est de 5 %, pour <i>T60</i> > 1s.
+</p>
+
+<h3> Évolution des acoustiques </h3>
+
+<p>
+Le graphique ci-dessous fournit un résumé de divers temps de réverbération résultant à la fois de simulations acoustiques géométriques (décorations typiques, non occupées, avant 1987) et de mesures (à partir de 1987) de Notre-Dame, à la suite de diverses études précédentes [3-6]. On note en particulier la condition <i>2020 (fire)</i>, représentant les mesures post-incendie, avec des trous dans la voûte, et la condition <i>1182 (apse)</i>, lorsque seule l'extrémité de l'abside de la cathédrale était ouverte, qui présentent toutes deux des temps de réverbération significativement plus courts que toutes les autres conditions, avant la prise en compte des décorations festives importantes.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_3.png">
+<p class="legend">
+Collection des temps de réverbération moyens par bande d'octave à Notre-Dame à la suite de simulations historiquement informées (avant 1987) et de mesures (à partir de 1987), conditions non occupées (données issues de [3-6]).
+</p>
+
+<h2> Bibliographie </h2>
+
+<p class="bibitem"> [1] Katz, B. F.G., Murphy, D., et Farina, A., « The Past Has Ears (PHE) : XR Explorations of acoustic spaces
+as Cultural Heritage », in Intl Conf on Augmented Reality,
+Virtual Reality and Computer Graphics (SALENTO AVR), volume 12243 of Lecture Notes in Computer Science, pp. 91–98, Salento, 2020, (<a href="https://hal.science/hal-02935400" >url</a>, <a href="https://youtu.be/nvC-SRuZkwc?si=kJKMINXn1DPsqlDn">vidéo</a>).
+</p>
+
+<p class="bibitem"> [2] Postma, B. N. et Katz, B. F.G., « Creation and Calibration Method of Virtual Acoustic Models for Historic Auralizations », Virtual Reality, 19, pp. 161–180, 2015, (<a href="https://hal.sorbonne-universite.fr/hal-01780472" >url</a>).
+</p>
+
+<p class="bibitem"> [3] Postma, B. N. et Katz, B. F.G., « Perceptive and objective evaluation of calibrated room acoustic simulation auralizations », J Acoust Soc Am, 140(6), pp.4326–4337, 2016, (<a href="https://hal.sorbonne-universite.fr/hal-01780459" >url</a>).
+</p>
+
+<p class="bibitem"> [4] Mullins, S. S., Canfield-Dafilou, E. K., et Katz, B. F.G., « The development of the early acoustics of the chancel in Notre-Dame de Paris: 1160-1230 », in Symp The Acoustics of Ancient Theatres, pp. 1–4, Vérone, 2022, (<a href="https://hal.science/hal-03724923/document" >url</a>).
+</p>
+
+<p class="bibitem"> [5] Canfield-Dafilou, E. K., Mullins, S. S., et Katz, B. F.G., « Opening the lateral chapels and the acoustics of Notre-Dame de Paris: 1225-1330 », in Symp The Acoustics of Ancient Theatres, pp. 1–4, Vérone, 2022, (<a href="https://hal.science/hal-03724948" >url</a>).
+</p>
+
+<p class="bibitem"> [6] Katz, B. F.G., et Weber, A., « An Acoustic Survey of the Cathédrale Notre-Dame de Paris before and after the Fire of 2019 », in Acoustics 2020, 2, 791–802; doi:10.3390/acoustics2040044, (<a href="https://hal.science/hal-02994273" >url</a>).
+</p>
+
+</div>
+</section>

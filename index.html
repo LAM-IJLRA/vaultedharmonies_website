@@ -3,112 +3,88 @@ layout: default
 ---
 
 <header id="pagetop">
-    <div class="header-content" >
-        <!-- <div class="header-content-inner" style="border:solid 2px; border-color: white; background-color: rgba(40, 40, 40, 0.2);"> -->
-        <div class="header-content-inner">
-            <h1>Vaulted Harmonies</h1>
-            <br>
-            <h2>Archeoconcert at Notre-Dame</h2>
+<div class="header-content" >
 
-            <!-- <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a> -->
-
-            <!-- Building warning -->
-            <!--
-            <br>
-            <p style="color:#FF0000">
-            <i class="fa fa-exclamation-triangle fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-            </p>
-            <p style="color:#FF0000">
-            <i><b>EVERTims framework under construction, not safe to use yet</i></b>
-            </p>
-            -->
-
-        </div>
-
-        <br> <br><br>
-
-        <!-- <a href="" class="btn btn-default btn-lg page-scroll" style="color:white; background-color: rgba(0, 0, 0, 0.4);">Watch Movie</a> -->
-
-        <!--
-        <p style="font-size: 22px; font-weight: 400; background-color: transparent; display: inline-block; padding-left:10px; padding-right:10px; border-radius:10px; "><i> Premiere at <a href"">Semaine du Son 2025</a> <br> January 23rd 2025 </i></p>
-        -->
-
-        <p style="font-size: 20px; font-weight: 350; background-color: transparent; display: inline-block; padding-left:10px; padding-right:10px; border-radius:10px; "><i>A concert through time and space in the cathedral</i>
-        </p>
-
+    <div class="header-content-inner">
+        <h1>Vaulted Harmonies</h1>
+        <br>
+        <h2>Archeoconcert at Notre-Dame</h2>
     </div>
 
-</header>
+    <br><br><br>
 
+    <p style="font-size: 20px; font-weight: 350;"><i>A concert through time and space in the cathedral</i>
+    </p>
+
+</div>
+</header>
 
 <hr class = "line">
 
-<section id="concert" style="background-color: rgba(40, 40, 40, 1);">
+<div class="baground-secondary">
 
+<section id="concert">
+<div class="container">
 
-    <div class="container">
+<h2>Concert</h2>
+<p>Experience the concert for yourself.</p>
 
-        <h2 style="color: white; margin-top: 0px; margin-bottom: 20px; text-align: left;">Concert</h2>
-        <p style="color: white; text-align: left;">Experience the concert for yourself.</p>
+<div class="row pack">
 
+    {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'concert_en'"%}
 
-        <div class="row pack">
+    {% assign sortedPages = subfolder | sort:'name' %}
 
-                {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'concert_en'"%}
+    {% for page in sortedPages limit:100 %}
+    {% if page.thumbnail %}
 
-                {% assign sortedPages = subfolder | sort:'name' %}
+    <div class="col-xs-12 col-sm-6 col-lg-4 card">
 
-                {% for page in sortedPages limit:100 %}
-                {% if page.thumbnail %}
+        {% if page.isready %}
+        <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor">
+            <div class="panel panel-default">
+                <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}">
 
-                <div class="col-xs-12 col-sm-6 col-lg-4 card">
-
-                    {% if page.isready %}
-                    <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor">
-                        <div class="panel panel-default">
-                            <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}">
-
-                            <div class="panel-body">
-                                <h3 class="panel-title">{{ page.title | truncate: 25 }}</h3>
-                            </div>
-                        </div>
-                    </a>
-
-                    {% else %}
-                    <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor disabled">
-                        <div class="panel panel-default">
-
-                            <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}" style="opacity:0.4;">
-
-                            <div class="panel-body">
-                                <h3 class="panel-title" style="color:gray;">{{ page.title | truncate: 25 }}</h3>
-                            </div>
-                        </div>
-                    </a>
-                    {% endif %}
-
+                <div class="panel-body">
+                    <h3 class="panel-title">{{ page.title | truncate: 25 }}</h3>
                 </div>
+            </div>
+        </a>
 
-                {% endif %}
-                {% endfor %}
+        {% else %}
+        <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor disabled">
+            <div class="panel panel-default">
 
-        </div>
+                <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}" style="opacity:0.4;">
+
+                <div class="panel-body">
+                    <h3 class="panel-title" style="color:gray;">{{ page.title | truncate: 25 }}</h3>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+
     </div>
 
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+</div>
 </section>
 
 
 <hr class = "line">
 
-
-<section id="backstage" style="background-color: rgba(40, 40, 40, 1);">
+<section id="backstage">
 
 <div class="container">
 
-<h2 style="color: white; margin-top: 0px; margin-bottom: 20px; text-align: left;">Backstage</h2>
+<h2 >Backstage</h2>
 <p style="color: white; text-align: left;">Explore how the concert was assembled, and how a documented virtual reconstruction was designed to create a first hand experience of the cathedral's musical history.</p>
 
-<p style="text-align: center; color:white; font-size: 18px; font-weight: 300;">(website under construction)</p>
+<!-- <p style="text-align: center; color:white; font-size: 18px; font-weight: 300;">(website under construction)</p> -->
 
     <div class="row pack">
 
@@ -154,18 +130,12 @@ layout: default
 
 </div>
 
+
 </section>
-
-
 
 <hr class = "line">
 
-<section id="logos" style="background-color: rgba(40, 40, 40, 1.0);">
-
-<!-- <h2 style="color: white; margin-top: 0px; margin-bottom: 20px; text-align: left;">Contributors</h2> -->
-
-<!-- <h1 style="color: white; margin-top: 0px; margin-bottom: 20px; text-align: left;">Contacts</h1>
-<p></p> -->
+<section id="logos">
 
 <div class="container">
 <div class="row text-center" style="margin-bottom: 30px;">
@@ -207,7 +177,7 @@ layout: default
 
 <hr class = "line">
 
-<section id="contacts" style="background-color: rgba(40, 40, 40, 1.0);">
+<section id="contacts">
 <div class="text-center no-padding">
     <a href="mailto:brian.katz@sorbonne-universite.fr">
       <i class="fa fa-envelope fa-2x wow bounceIn" data-wow-delay=".1s"></i>
@@ -215,4 +185,6 @@ layout: default
     <p style="color: white;">contact</p>
 </div>
 </section>
+
+</div>
 

@@ -1,0 +1,43 @@
+---
+layout: default_fr
+title: Auralisations
+description: ...
+thumbnail: au_thumbnail.jpg
+isready: true
+---
+
+<section>
+<div class="container text-justify">
+
+<h1> {{page.title}} </h1>
+
+<h2>Outil de rendu audio, reliant recherche et production</h2>
+
+<p>
+L'auralisation, une méthode permettant de reproduire des expériences auditives réalistes dans des environnements virtuels, est utilisée en acoustique architecturale et dans la conception de systèmes sonores [1, 2]. Cette technique implique la convolution de sons anéchoïques avec des Réponses Impulsionnelles de Salle (RIR) pour simuler la propagation du son dans des espaces spécifiques. Les auralisations dynamiques augmentent le réalisme en interpolant entre les RIR lorsque les sources ou les récepteurs se déplacent [3,4], bien que les outils pour de telles simulations dynamiques soient limités [5].
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/ac_2.png">
+<p class="legend">
+    Exemple de scène RoomZ à Notre-Dame avec un récepteur près du transept et une trajectoire de source en mouvement.
+</p>
+
+<p>
+Pour combler le fossé entre la recherche acoustique et l'application pratique, nous avons développé <a href="http://roomz.dalembert.upmc.fr/">RoomZ</a>, un plugin audio pour stations de travail audio-numériques. Il permet des auralisations dynamiques en ajustant les positions des sources et des récepteurs sur des grilles RIR, avec une convolution rapide multi-cœur et des scénarios de navigation personnalisés avec des sorties multi-canaux (mono, binaural, ambisonique, etc.). L'interface présente une carte graphique 2D pour le panoramique, appliquant dynamiquement des poids basés sur les distributions géométriques afin de convoluer l'entrée avec les RIR appropriées. RoomZ permet un rendu précis d'environnements comme celui de la Notre-Dame médiévale, intégrant directement la recherche acoustique à la production, améliorant ainsi les applications de réalité virtuelle et augmentée.
+</p>
+
+<h2> Bibliographie </h2>
+
+<p class="bibitem"> [1] Vorländer, M., « Auralization: Fundamentals of acoustics, modelling, simulation, algorithms and acoustic virtual reality », Springer Nature, 2020, (<a href="https://link.springer.com/book/10.1007/978-3-540-48830-9">url</a>).</p>
+
+<p class="bibitem"> [2] Thery, D., Boccara, V., et Katz, B. F.G., « Auralization uses in acoustical design: a survey study », J Acoust Soc Am, 145(6), pp. 3446–3456, 2019, (<a href="https://hal.science/hal-02155781/document">url</a>).</p>
+
+<p class="bibitem"> [3] Savioja, L., Huopaniemi, J., Lokki, T., et Väänänen, R., « Creating interactive virtual acoustic environments », J Aud Eng Soc, 47(9), pp. 675–705, 1999, (<a href="http://lib.tkk.fi/Diss/2002/isbn9512261588/article1.pdf">url</a>).</p>
+
+<p class="bibitem"> [4] De Muynke, J., Poirier-Quinot, D., et Katz, B. F.G., « Effect of interpolation artefacts on perceived stability of nearby sources in a navigable reverberant environment », J Aud Eng Soc, 2024, (<a href="https://cnrs.hal.science/IJLRDA/hal-04745857v1">url</a>).</p>
+
+<p class="bibitem"> [5] McKenzie, T., Schlecht, S. J., et Pulkki, V., « Auralisation of the Transition between Coupled Rooms », International Conference on Immersive and 3D Audio (I3DA), 2021, (<a href="https://ieeexplore.ieee.org/document/9610955">url</a>).</p>
+
+</div>
+</section>
+

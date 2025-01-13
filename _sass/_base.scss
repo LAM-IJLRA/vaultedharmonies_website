@@ -46,6 +46,17 @@ body {
     width: 100%;
 }
 
+.baground-secondary {
+    background-color: rgba($theme-secondary, 1);
+    h2, p {
+        color: white;
+    }
+    h2 {
+        text-align: left;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+}
 
 /*
 #font-page-canvas {
