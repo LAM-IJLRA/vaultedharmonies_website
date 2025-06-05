@@ -129,7 +129,7 @@ audio, video, .img-responsive, .embed-responsive, .iframe-responsive {
     margin-top: 5px;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     // text-align: left;
     font-weight: 300;
     /*avoid margin ignored after floating elements*/
@@ -807,8 +807,11 @@ audio:focus {
 }
 
 // font awsome
-.fa, .fas, .fab {
+.baground-secondary .fa, .fas, .fab {
     color: $theme-primary;
+}
+.fa, .fas, .fab {
+    color: $theme-secondary;
 }
 .fa:hover, .fas:hover, .fab:hover{
     color: $theme-police-link;
