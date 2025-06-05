@@ -807,13 +807,13 @@ audio:focus {
 }
 
 // font awsome
-.baground-secondary .fa, .fas, .fab {
-    color: $theme-primary;
-}
 .fa, .fas, .fab {
     color: $theme-secondary;
 }
-.fa:hover, .fas:hover, .fab:hover{
+.baground-secondary .fa, .baground-secondary .fas, .baground-secondary .fab {
+    color: $theme-primary;
+}
+.icon-hover:hover{
     color: $theme-police-link;
 }
 
