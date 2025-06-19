@@ -19,10 +19,10 @@ layout: default_fr
 </div>
 </header>
 
-<hr class = "line">
 
 <div class="baground-secondary">
 
+<hr class = "line">
 <section id="concert">
 <div class="container">
 
@@ -70,7 +70,6 @@ layout: default_fr
     {% endfor %}
 
 </div>
-
 </div>
 </section>
 
@@ -78,10 +77,9 @@ layout: default_fr
 <hr class = "line">
 
 <section id="backstage">
-
 <div class="container">
 
-<h2 >Les Coulisses</h2>
+<h2>Les Coulisses</h2>
 <p style="color: white; text-align: left;">Explorez comment le concert a été organisé et comment une reconstruction virtuelle documentée a été conçue pour offrir une expérience immersive de l’histoire musicale de la cathédrale.</p>
 
     <div class="row pack">
@@ -127,8 +125,59 @@ layout: default_fr
     </div>
 
 </div>
+</section>
+
+<hr class = "line">
+
+<section id="backstage">
+<div class="container">
+
+<h2>Évènements</h2>
+<p style="color: white; text-align: left;">Dates et évènements passés.</p>
+
+    <div class="row pack">
+
+        {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'events_fr'"%}
+        {% assign sortedPages = subfolder | sort:'name' %}
+
+        {% for page in sortedPages limit:100 %}
+        {% if page.thumbnail %}
 
 
+        <div class="col-xs-12 col-sm-6 col-lg-4 card">
+
+            {% if page.isready %}
+            <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor">
+                <div class="panel panel-default">
+                    <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}">
+
+                    <div class="panel-body">
+                        <h3 class="panel-title">{{ page.title | truncate: 25 }}</h3>
+                    </div>
+                </div>
+            </a>
+
+            {% else %}
+            <a href="{{ page.url | prepend: site.baseurl }}" class="index-anchor disabled">
+                <div class="panel panel-default">
+
+                    <img class="panel-img" src="{{site.baseurl}}/img/{{page.thumbnail}}" alt="{{post.title}}" style="opacity:0.4;">
+
+                    <div class="panel-body">
+                        <h3 class="panel-title" style="color:gray;">{{ page.title | truncate: 25 }}</h3>
+                    </div>
+                </div>
+            </a>
+            {% endif %}
+
+        </div>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+</div>
 </section>
 
 <hr class = "line">
