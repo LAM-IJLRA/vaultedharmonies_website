@@ -3,12 +3,55 @@ layout: default
 title: Production
 description: ...
 thumbnail: pr_thumbnail.jpg
+isready: true
 ---
 
 <section>
 <div class="container text-justify">
 
 <h1> {{page.title}} </h1>
+
+<h2> Mastering </h2>
+
+<p>
+There were two mastering stages: the first focused on the musical balance and authenticity of the auralisations, the second on adjusting the overall spectrum of the concert to the various distribution formats.
+To ensure authenticity, the sound engineers used reference recordings captured in situ during the recording sessions.
+They adjusted the mix gains of the individual musicians prior to convolution so that the final auralisation, rendered at the reference microphone position, matched the balance of voices heard in the original recordings.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/pr_2.jpg">
+<p class="legend">Example <a href="https://www.merging.com/products/pyramix">Pyramix</a> project used during mix sessions.</p>
+
+<p>
+The second mastering stage was a series of sessions, each dedicated to a specific rendering format.
+For example, the creation of the Dolby Atmos DCP for theatrical screenings required a half-day session in a licensed studio.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/pr_1.jpg">
+<p class="legend">Dolby Atmos mastering at <a href="https://www.lapucealoreille-studio.com/">La Puce à l'oreille</a>.</p>
+
+
+<h2> Distribution </h2>
+
+<p>
+To facilitate distribution, the ambisonic auralisation was decoded into a wide range of multichannel formats.
+Except for the Atmos 20.1 version, all the other formats were created using either Panoramix or Transpan, both built on the Spat5 library.
+Transpan was used to generate the transaural version, intended for users on laptops and other 2.0 setups.
+Panoramix was used for all other multichannel exports (5.1, 7.1, 9.1, etc.), as well as the binaural version.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/pr_3.jpg">
+<p class="legend">Transaural decoding session.</p>
+
+<p>
+The binaural version was primarily created for viewers on online streaming platforms (Youtube, Vimeo, etc.).
+Careful attention was given to delivering a sharp and immersive spatial experience, despite the limitations of non-individualised rendering.
+Binaural decoding was performed using the HRTF 1032 from the <a href="http://recherche.ircam.fr/equipes/salles/listen/">LISTEN</a> database, selected because it was most frequently rated as the best by participants in previous perceptual HRTF evaluation studies.
+</p>
+
+<img class="img-responsive borderless" src="{{ site.baseurl }}/img/pr_4.jpg">
+<p class="legend"><a href="https://www.reaper.fm/">Reaper</a> and <a href="https://forum.ircam.fr/projects/detail/panoramix/">Panoramix</a> projects used for 7.1, 5.1, binaural, etc. decoding.</p>
+
 
 </div>
 </section>
