@@ -23,6 +23,7 @@ layout: default_fr
 <div class="baground-secondary">
 
 <hr class = "line">
+
 <section id="concert">
 <div class="container">
 
@@ -73,18 +74,17 @@ layout: default_fr
 </div>
 </section>
 
-
 <hr class = "line">
 
 <section id="backstage">
 <div class="container">
 
-<h2>Les Coulisses</h2>
-<p style="color: white; text-align: left;">Explorez comment le concert a été organisé et comment une reconstruction virtuelle documentée a été conçue pour offrir une expérience immersive de l’histoire musicale de la cathédrale.</p>
+<h2>Évènements</h2>
+<p style="color: white; text-align: left;">Dates et évènements passés.</p>
 
     <div class="row pack">
 
-        {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'backstage_fr'"%}
+        {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'events_fr'"%}
         {% assign sortedPages = subfolder | sort:'name' %}
 
         {% for page in sortedPages limit:100 %}
@@ -132,12 +132,12 @@ layout: default_fr
 <section id="backstage">
 <div class="container">
 
-<h2>Évènements</h2>
-<p style="color: white; text-align: left;">Dates et évènements passés.</p>
+<h2>Les Coulisses</h2>
+<p style="color: white; text-align: left;">Explorez comment le concert a été organisé et comment une reconstruction virtuelle documentée a été conçue pour offrir une expérience immersive de l’histoire musicale de la cathédrale.</p>
 
     <div class="row pack">
 
-        {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'events_fr'"%}
+        {% assign subfolder = site.pages | where_exp: "item" , "item.path contains 'backstage_fr'"%}
         {% assign sortedPages = subfolder | sort:'name' %}
 
         {% for page in sortedPages limit:100 %}
